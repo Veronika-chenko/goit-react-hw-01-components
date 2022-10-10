@@ -1,23 +1,21 @@
 import PropTypes from 'prop-types';
-// import css from './Statistics.module.css'
-// import { Section } from './Statistics.styled';
-// import { StatList } from './StatList/StatList';
+import { StatList } from './StatItem/StatItem';
+import {StatisticsWrapper, StatisticsTitle, StatListWrapper, StatListItem} from './Statistics.styled'
 
 export const Statistics = ({title, stats}) => {
     return (
-        <section>
-            {title && <h2>{title}</h2>}
-            <ul>
+        <StatisticsWrapper>
+            {title && <StatisticsTitle>{title}</StatisticsTitle>}
+            <StatListWrapper>
                 {stats.map(stat => {
                     return (
-                        <li key={stat.id}>
-                            <span>{stat.label}</span>
-                            <span>{stat.percentage}</span>
-                        </li>
+                        <StatListItem key={stat.id}>
+                            <StatList stat={stat} />
+                        </StatListItem>
                     )
                 })}
-            </ul>
-        </section>
+            </StatListWrapper>
+        </StatisticsWrapper>
     )
 }
 
