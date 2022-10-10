@@ -6,24 +6,20 @@ import {
     StatListItem,
     StatLabel,
     StatPercentage
-} from './Statistics.styled'
-import {getRandomHexColor} from 'function'
+} from './Statistics.styled';
+import { getRandomHexColor } from 'function';
 
 export const Statistics = ({title, stats}) => {
     return (
         <StatisticsWrapper>
             {title && <StatisticsTitle>{title}</StatisticsTitle>}
             <StatListWrapper>
-                {stats.map(state => {
-                    return (
-                        <StatListItem key={state.id} style={{backgroundColor: getRandomHexColor()}}>
-                            <>
-                                <StatLabel>{state.label}</StatLabel>
-                                <StatPercentage>{state.percentage}%</StatPercentage>
-                            </>
-                        </StatListItem>
-                    )
-                })}
+                {stats.map(state => 
+                    <StatListItem key={state.id} style={{backgroundColor: getRandomHexColor()}}>
+                        <StatLabel>{state.label}</StatLabel>
+                        <StatPercentage>{state.percentage}%</StatPercentage>
+                    </StatListItem>
+                )}
             </StatListWrapper>
         </StatisticsWrapper>
     )

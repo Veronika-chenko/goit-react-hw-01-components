@@ -22,7 +22,7 @@ padding: 10px 20px;
 text-transform: uppercase; 
 `;
 
-export const TableRowData = styled.tr`
+export const TableDataRow = styled.tr`
 display:grid;
 grid-template-columns: 1fr 1fr 1fr;
 background-color: #edf3fc;
