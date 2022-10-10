@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const FriendListWrapper = styled.ul`
 width: 400px;
-margin: 0 auto;
 display: grid;
 grid-row-gap: 10px;
-margin: 0 auto 20px;
+margin-bottom: 20px;
 `
 
 export const FriendItem = styled.li`
