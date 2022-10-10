@@ -1,9 +1,11 @@
-export const FriendListItem = ({friend: {avatar, name, isOnline}}) => {
+import {FriendBadge, FriendImg, FriendName} from './FriendListItem.styled'
+
+export const FriendListItem = ({ friend: { avatar, name, isOnline } }) => {
     return (
         <>
-            <span>{isOnline}</span>
-            <img src={avatar} alt={avatar} width="48" />
-            <p>{name}</p>
+            <FriendBadge>{isOnline}</FriendBadge>
+            <FriendImg src={avatar} alt={avatar} width="48" />
+            <FriendName>{name}</FriendName>
         </>
     )
 }
