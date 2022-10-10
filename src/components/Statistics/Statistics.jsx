@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
-import { StatList } from './StatItem/StatItem';
-import {StatisticsWrapper, StatisticsTitle, StatListWrapper, StatListItem} from './Statistics.styled'
+import {
+    StatisticsWrapper,
+    StatisticsTitle,
+    StatListWrapper,
+    StatListItem,
+    StatLabel,
+    StatPercentage
+} from './Statistics.styled'
 
 export const Statistics = ({title, stats}) => {
     return (
@@ -10,7 +16,10 @@ export const Statistics = ({title, stats}) => {
                 {stats.map(stat => {
                     return (
                         <StatListItem key={stat.id}>
-                            <StatList stat={stat} />
+                            <>
+                                <StatLabel>{stat.label}</StatLabel>
+                                <StatPercentage>{stat.percentage}</StatPercentage>
+                            </>
                         </StatListItem>
                     )
                 })}

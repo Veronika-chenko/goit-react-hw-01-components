@@ -24,6 +24,14 @@ padding: 8px 20px;
 border: 1px solid #757575;;
 `;
 
+export const StatLabel = styled.span`
+font-size: 18px;
+`
+
+export const StatPercentage = styled.span`
+font-weight: 500;
+font-size: 24px;
+`
 
 // display: grid;
 // grid-template-columns: 1fr;

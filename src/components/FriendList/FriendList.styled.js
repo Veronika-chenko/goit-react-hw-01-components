@@ -10,7 +10,7 @@ export const FriendItem = styled.li`
 width: 400px;
 display: flex;
 align-items: center;
-gap: 5px;
+gap: 8px;
 border: 1px solid #757575;
 border-radius: 4px;
 padding: 5px 15px;
