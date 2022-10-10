@@ -7,18 +7,19 @@ import {
     StatLabel,
     StatPercentage
 } from './Statistics.styled'
+import {getRandomHexColor} from 'function'
 
 export const Statistics = ({title, stats}) => {
     return (
         <StatisticsWrapper>
             {title && <StatisticsTitle>{title}</StatisticsTitle>}
             <StatListWrapper>
-                {stats.map(stat => {
+                {stats.map(state => {
                     return (
-                        <StatListItem key={stat.id}>
+                        <StatListItem key={state.id} style={{backgroundColor: getRandomHexColor()}}>
                             <>
-                                <StatLabel>{stat.label}</StatLabel>
-                                <StatPercentage>{stat.percentage}</StatPercentage>
+                                <StatLabel>{state.label}</StatLabel>
+                                <StatPercentage>{state.percentage}%</StatPercentage>
                             </>
                         </StatListItem>
                     )
